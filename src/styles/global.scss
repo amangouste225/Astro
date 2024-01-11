@@ -1,0 +1,122 @@
+// Fonts Styes
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --back: #000;
+  --gray: #2b2e3a;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #fafafa;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: "inter", sans-serif;
+  scroll-behavior: smooth;
+  letter-spacing: -0.05em;
+}
+
+.wrapper {
+  max-width: 1750px;
+  padding: 0 20px;
+  position: relative;
+  margin: 0 auto;
+}
+
+// Nav Menus
+
+.menu {
+  position: relative;
+  border: none;
+  width: 130px;
+  cursor: pointer;
+  height: 50px;
+  text-transform: uppercase;
+  font-weight: 500;
+  background-color: black;
+  border-radius: 50px;
+  color: rgb(255, 255, 255);
+  &:hover {
+    &::after,
+    &::before {
+      position: absolute;
+      content: "";
+      transition: 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+    &::before {
+      transform: translateX(-15px) translateY(10px);
+    }
+    &::after {
+      transform: translateY(-5px);
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    right: 15px;
+    top: 40%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    transition: 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    right: 30px;
+    top: 40%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    transition: 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+
+  align-items: center;
+  .label {
+    position: relative;
+    width: 40%;
+    height: 50%;
+    span {
+      position: absolute;
+      top: 0;
+    }
+  }
+}
+
+.highlight {
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  padding: 0 10px;
+  color: #000;
+  &:hover {
+    color: white;
+    mix-blend-mode: difference;
+  }
+  span:nth-child(2) {
+    position: absolute;
+    height: 5px;
+    left: 0;
+    width: 100%;
+    mix-blend-mode: difference;
+    bottom: 0;
+    background-color: #000000;
+    transition: 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+}
+
+.highlight:hover .bar {
+  height: 100%;
+  transition: 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+}

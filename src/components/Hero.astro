@@ -1,0 +1,26 @@
+---
+
+const {title} = Astro.props
+---
+
+<div class="flex justify-center flex-col h-screen items-center max-w-7xl mx-auto px-5 title">
+        <h1 class="lg:text-big leading-1 font-extrabold relative title text-center">
+            Salam aleykoum !✌️I'm <div class="highlight"><span>Amangoua Ange.</span><span class="bar"></span> </div></h1>
+        </h1>
+        <h4 class="text-2xl text-center mt-10">Aspiring Software Developer enthusiastic about creating interactive and user-friendly web experiences. Always exploring new ways to stay at the forefront of technologies.</h4>
+</div>
+
+
+
+<script>
+
+import { delay, stagger } from "framer-motion/dom"
+const title = document.querySelector('.title')
+gsap.from(title, {
+    y:300,
+    ease:'back',
+    stagger:0.05,
+    rotation:10
+})
+
+</script>
