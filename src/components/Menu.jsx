@@ -1,6 +1,9 @@
-export const Menu = () => {
+export const Menu = ({ isActive, setisActive }) => {
   return (
-    <button className="lg:text-md menu h-1 relative">
+    <button
+      className={`${isActive ? "menu open" : "menu active"} lg:text-btn`}
+      onClick={() => setisActive(!isActive)}
+    >
       <div className="label">
         <span>Menu</span>
       </div>

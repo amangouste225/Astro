@@ -1,28 +1,38 @@
 ---
-
+import { Icon } from 'astro-icon/components'
 const {title} = Astro.props
 ---
-
-<div class="flex overflow-hidden justify-center h-screen flex-col items-center max-w-7xl mx-auto title">
-        <h1 class="lg:text-big leading-1 font-extrabold relative title text-center">
+<div class="bg-[url('./pattern.svg')] bg-contain">
+<div class="flex overflow-hidden justify-center h-[calc(100vh-7rem)] top-0 left-0 bottom-0 right-0 flex-col items-center max-w-6xl mx-auto title">
+        <h1 class="text-3xl leading-big lg:text-big leading-1 font-extrabold relative title text-center">
             Salam aleykoum !✌️I'm <div class="highlight"><span>Amangoua Ange.</span><span class="bar"></span> </div></h1>
         </h1>
-        <h4 class="text-2xl text-center mt-10">Aspiring Software Developer enthusiastic about creating interactive and user-friendly web experiences. Always exploring new ways to stay at the forefront of technologies.</h4>
-        <div>
-            social network
+        <p class="text-lg lg:text-xl text-center mt-10">Creative Frontend Developer enthusiastic about creating interactive and user-friendly web experiences. Always exploring new ways to stay at the forefront of technologies. Currently learning <span class="gsap">GSAP</span> ,<span class="gsap">ThreeJS</span>  & <span class="gsap">WebGL</span>  </p>
+        <div class="flex flex-col lg:flex-row  justify-center lg:justify-between gap-2 lg:gap-10 items-center mt-5 text-xl">
+           <h2 class="font-bold">
+            Social networks
+           </h2>
+          <div class="flex justify-around gap-5">
+            <Icon name="facebook" title='Facebook' />
+            <Icon name="linkedin"   title='LinkedIn'/>
+            <Icon name="twitter" title='Twitter' />
+            <Icon name="instagram"  title='Instagram'/>
+          </div>
         </div>
 </div>
 
+</div>
 
+<style>
+[data-icon] {
+    font-size: 1.5rem;
+    color: black;
+}
 
-<script>
-
-const title = document.querySelector('.title')
-gsap.from(title, {
-    y:300,
-    ease:'back',
-    stagger:0.05,
-    rotation:10
-})
-
-</script>
+[data-icon]:hover {
+    transform: scale(1.5);
+    color: red;
+    border: 1px solid red;
+   
+}
+</style>

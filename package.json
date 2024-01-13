@@ -18,5 +18,8 @@
     "sass": "^1.69.7",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "astro-icon": "^1.0.2"
   }
 }

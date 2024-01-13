@@ -1,14 +1,55 @@
 ---
-
+import { Icon } from 'astro-icon/components'
 const {title} = Astro.props
+
 ---
 
-<div class="flex justify-center flex-col items-center max-w-7xl mx-auto">
-        <h1 class="lg:text-big leading-1 font-extrabold relative title text-center">
+<div class="flex justify-center flex-col items-center max-w-6xl mx-auto" id="about">
+        <h2 class="text-2xl text-red lg:text-4xl font-bold text-center mb-8">
            About me
-        </h1>
-       
+        </h2>
+        <p class="text-lg lg:text-xl text-center">Hello, my name is Amangoua Kacou Ange ( <span class="font-bold">AKA</span>  ) and 
+        I started learning Web Development after my degree in 2016. <br>  It was easy for me to grasp that as I already had a programming background. I started from the very start HTML and CSS and worked my way up to JavaScript and practicing building simple projects. <br> <br> I moved to advanced JS courses and started working on building my logic skills. I started uploading my projects on github and it really boosted my confidence after watching the green dots displaying how consistent I have been in coding and I have not stopped since then. <br> <br>
+        I still have lots to learn but I am consistent and willing to take challenges.
+        </p>
+        <div>
+                <h3 class="text-md text-red lg:text-xl font-bold my-5 text-center">My CurrentStack of languages /technologies</h3>
+                <div class="flex gap-5 flex-wrap justify-center">
+                         <Icon name="html" />
+                         <Icon name="css" />
+                         <Icon name="tailwindcss" />
+                         <Icon name="chakraui" />
+                         <Icon name="sass" />
+                         <Icon name="react" />
+                         <Icon name="typescript" />
+                         <Icon name="git" />
+                         <Icon name="figma" />
+                         <Icon name="ps" />
+                         <Icon name="ai" />
+                         <Icon name="in" />
+                         <Icon name="wordpress" />
+                         <Icon name="prestashop" />
+                </div>
+                <h3 class="text-md text-red lg:text-xl font-bold my-5 text-center">Stack of languages/technologies I plan to learn</h3>
+                <div class="flex gap-5 flex-wrap justify-center">
+                         <Icon name="threejs" />
+                         <Icon name="webgl" />
+                         <Icon name="nodejs" />
+                </div>
+        </div>   
 </div>
 
+<style>
 
+[data-icon] {
+    font-size: 2.5rem;
+    color: black;
+}
 
+@media (max-width:844px) {
+[data-icon] {
+    font-size: 2rem;
+    color: black;
+}   
+}
+</style>
