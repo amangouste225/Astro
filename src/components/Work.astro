@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content";
+import Workpreview from "./Workpreview.astro";
+const allWorks = await getCollection("work")
+
+---
+
+<div class="max-w-6xl mx-auto my-10">
+    <h2 class="text-xl text-red lg:text-3xl font-bold text-center mb-8">
+           My projects
+    </h2>
+    <ul class="grid lg:grid-cols-3 gap-10 md:grid-cols-2 grid-cols-1 content-center place-content-center lg:px-0 px-5">
+       {allWorks.map(work => (
+        <li class="justify-center justify-items-center	"> 
+        <Workpreview project={work} />    
+        </li>
+       ))}
+    </ul>
+</div>
+
+
+

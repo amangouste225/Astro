@@ -1,0 +1,30 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { Icon } from 'astro-icon/components';
+interface Props {
+	project: CollectionEntry<'work'>;
+}
+
+const { data, slug } = Astro.props.project;
+---
+
+<div class="works rounded-md group">
+	<img src={data.img} alt={data.img_alt || ''} class="w-full h-full" />
+	<div class="mt-3 flex px-1 justify-between h-8 items-center group-hover:opacity-0">
+        <span class="text-lg font-bold capitalize">{data.title}</span>
+    </div >
+    <div class="bg-red opacity-0 group-hover:opacity-100 h-12 absolute text-white bottom-0 w-full flex justify-between items-center px-3">
+        <span class="text-md leading-tight font-semibold capitalize">{data.title}</span>
+	    <span class="flex gap-3"> <Icon name='github' /> <Icon name='right' />  </span>
+    </div>
+</div>
+
+
+
+<style>
+[data-icon] {
+    font-size: 1.7rem;
+    color: white;
+}
+
+</style>

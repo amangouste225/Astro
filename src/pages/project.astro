@@ -1,5 +1,16 @@
 ---
-import { getEntry, getEntries } from 'astro:content';
+import { getCollection } from "astro:content";
+
+const allWorks = await getCollection("work")
 
 ---
 
+
+<div>
+    <ul>
+        {allWorks.map((link)=>(
+
+        <li>{link} </li>
+        ))}
+    </ul>
+</div>
