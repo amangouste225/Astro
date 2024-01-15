@@ -1,0 +1,36 @@
+---
+import { Icon } from "astro-icon/components"
+---
+<div class="border-black border-t-2">
+<div class="max-w-6xl  mt-10 mx-auto">
+    <div class="text-center pb-10">
+        <h3 class="text-2xl font-bold text-red">Connect with me</h3>
+         <div class="flex justify-center my-5 gap-x-5">
+            <Icon name="facebook" title='Facebook' />
+            <Icon name="linkedin"   title='LinkedIn'/>
+            <Icon name="twitter" title='Twitter' />
+            <Icon name="instagram"  title='Instagram'/>
+          </div>
+        <p class="text-md font-normal">Copyright @ { new Date()
+ .getFullYear()}, Amangoua Ange</p>
+    </div>
+</div>
+</div>
+
+<style>
+
+[data-icon] {
+    font-size: 2.5rem;
+    color: black;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 50px;
+     transition: 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+[data-icon]:hover {
+    color: white;
+    background-color: black;
+}
+
+</style>
